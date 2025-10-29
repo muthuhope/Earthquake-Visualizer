@@ -1,16 +1,71 @@
-# React + Vite
+**Earthquake Visualizer Web App**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time interactive **Earthquake Visualization** web application built with **React**, **Leaflet.js**, and **OpenStreetMap**.  
+It displays recent global earthquakes on a responsive world map, with magnitude-based color coding and detailed information for each event.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Features**
 
-## React Compiler
+- **Real-time Earthquake Data** — Fetched from the [USGS Earthquake API](https://earthquake.usgs.gov/).
+- **Interactive World Map** — Zoom, drag, and explore earthquake locations.
+- **Magnitude-based Indicators**
+  - Green — Minor (Magnitude < 2)
+  - Yellow — Moderate (2 ≤ Magnitude < 4)
+  - Orange — Strong (4 ≤ Magnitude < 6)
+  - Red — Severe (≥ 6)
+- **Detailed Popups** — View location, magnitude, and timestamp.
+- **Real-time Chart** — Shows earthquake frequency or magnitude distribution.
+- **Auto Refresh Button** — Instantly refreshes the map with the latest data.
+- **Responsive Design** — Fully adaptable for all screen sizes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+**Tech Stack**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Technology | Purpose **
+
+**React.js** | Frontend Framework 
+**Leaflet.js** | Interactive Maps 
+**OpenStreetMap** | Map Tile Provider 
+**Chart.js / Recharts** | Data Visualization 
+**USGS API** | Earthquake Data Source 
+
+---
+
+**Installation & Setup**
+
+1. Clone the Repository
+```bash
+git clone https://github.com/your-username/earthquake-visualizer.git
+cd earthquake-visualizer
+
+2. Install Dependencies
+npm install
+
+3. Run the Development Server
+npm run dev
+Then open http://localhost:5173
+ in your browser.
+
+**Project Structure**
+earthquake-visualizer/
+│
+├── public/
+│   ├── earthquake.png         # Favicon / App icon
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── MapView.jsx        # Main Leaflet map component
+│   │   ├── ChartView.jsx      # Earthquake chart visualization
+│   │   └── Controls.jsx       # Buttons for refresh/time range
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── package.json
+└── README.md
+
+**Developer Info**
+  Muthukumaran M
